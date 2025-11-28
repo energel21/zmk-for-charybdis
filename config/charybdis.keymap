@@ -11,6 +11,70 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        f1 {
+            bindings = <&kp F1>;
+            key-positions = <1 42>;
+        };
+
+        f2 {
+            bindings = <&kp F2>;
+            key-positions = <2 42>;
+        };
+
+        f3 {
+            bindings = <&kp F3>;
+            key-positions = <3 42>;
+        };
+
+        f4 {
+            bindings = <&kp F4>;
+            key-positions = <4 42>;
+        };
+
+        f5 {
+            bindings = <&kp F5>;
+            key-positions = <5 42>;
+        };
+
+        f6 {
+            bindings = <&kp F6>;
+            key-positions = <42 13>;
+        };
+
+        f7 {
+            bindings = <&kp F7>;
+            key-positions = <14 42>;
+        };
+
+        f8 {
+            bindings = <&kp F8>;
+            key-positions = <15 42>;
+        };
+
+        f9 {
+            bindings = <&kp F9>;
+            key-positions = <16 42>;
+        };
+
+        f10 {
+            bindings = <&kp F10>;
+            key-positions = <17 42>;
+        };
+
+        f11 {
+            bindings = <&kp F11>;
+            key-positions = <25 42>;
+        };
+
+        f12 {
+            bindings = <&kp F12>;
+            key-positions = <26 42>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -29,12 +93,12 @@
 
         layer_1 {
             bindings = <
-&kp F1          &kp F2  &kp F3  &kp F4        &kp F5     &kp F6        &kp F7     &kp F8      &kp F9      &kp F10            &kp F11  &kp F12
-&kp CAPS        &none   &none   &none         &none      &bt BT_NXT    &none      &none       &kp UP      &none              &none    &none
-&kp LEFT_SHIFT  &none   &none   &none         &none      &bt BT_CLR    &none      &kp LEFT    &kp DOWN    &kp RIGHT          &none    &none
-&kp LCTRL       &none   &none   &none         &none      &none         &none      &none       &kp PERIOD  &kp RIGHT_BRACKET  &none    &kp EQUAL
-                                &kp LEFT_WIN  &kp SPACE  &none         &kp LALT   &kp DELETE
-                                              &mkp MB1   &mkp MB2      &kp ENTER
+&kp ESC         &kp N1    &kp N2    &kp N3        &kp N4          &kp N5              &kp N6     &kp N7      &kp N8      &kp N9             &kp N0         &kp K_MUTE
+&kp CAPS        &kp HOME  &none     &kp UP        &none           &bt BT_NXT          &none      &kp N4      &kp N5      &kp N6             &kp PAGE_UP    &kp C_VOLUME_UP
+&kp LEFT_SHIFT  &kp END   &kp LEFT  &kp DOWN      &kp RIGHT       &bt BT_CLR          &none      &kp N1      &kp N2      &kp N3             &kp PAGE_DOWN  &kp C_VOL_DN
+&kp LCTRL       &kp INS   &none     &none         &kp LANGUAGE_2  &kp LANG_HANGEUL    &none      &kp N0      &kp PERIOD  &kp RIGHT_BRACKET  &none          &kp EQUAL
+                                    &kp LEFT_WIN  &kp SPACE       &none               &kp LALT   &kp DELETE
+                                                  &mkp MB1        &mkp MB2            &kp ENTER
             >;
 
             trackball-bindings = <&tsl>;
